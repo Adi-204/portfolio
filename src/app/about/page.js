@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export default function About() {
   return (
-    <div className=" flex flex-col w-full md:flex-row-reverse h-full items-center gap-x-10 gap-y-10 justify-center pb-10 md:pb-0">
+    <div className="flex flex-col-reverse md:flex-row-reverse w-full h-full items-center gap-x-10 gap-y-10 justify-center pb-10 md:pb-0">
       <div className="flex flex-col font-ropaSans w-4/5 md:w-2/5 lg:w-1/3 text-md text-white gap-y-4">
         <h2 className="text-accent-text opacity-70">Adi Boghawala</h2>
         <h2>
