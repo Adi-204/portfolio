@@ -99,9 +99,9 @@ export default function Search() {
   const SearchItemOpen = ({ data }) => {
     return (
       <div>
-        <div className="fixed inset-0 bg-gray-900 bg-opacity-70 z-40 flex items-center justify-center">
+        <div className="fixed inset-0 bg-gray-900 bg-opacity-70 z-40 flex items-center justify-center p-4">
           <div
-            className={`p-2 flex flex-col items-center w-11/12 md:w-4/5 lg:w-3/5 bg-accent-color rounded-lg shadow-lg z-50 transform transition-transform duration-300 ease-in-out`}
+            className={`p-2 flex flex-col items-center w-full max-w-2xl bg-accent-color rounded-lg shadow-lg z-50 max-h-[90vh]`}
           >
             <div className="flex row w-full justify-end mb-2">
               <div
@@ -111,17 +111,16 @@ export default function Search() {
               />
             </div>
 
-            <div className="flex flex-col w-full items-center justify-start h-3/5 p-4 gap-y-2 relative">
+            <div className="flex flex-col w-full items-center justify-start h-full p-4 gap-y-2 overflow-hidden">
               <h2 className="w-full text-2xl">{data.title}</h2>
-              <div className={`flex flex-row w-full gap-x-2`}>
+              <div className={`flex flex-row w-full gap-x-2 flex-wrap`}>
                 {displayQuery === "Adi-projects" &&
                   data.links.map((link, idx) => (
                     <Link
-                      className={`flex flex-row py-1.5 px-3 text-sm font-medium text-center items-center gap-x-2 rounded  border border-stone-700 transform transition-all duration-300 ${
-                        link.name == "github"
+                      className={`flex flex-row py-1.5 px-3 text-sm font-medium text-center items-center gap-x-2 rounded border border-stone-700 transform transition-all duration-300 ${link.name == "github"
                           ? "bg-dark-purple-300 hover:bg-[#4D456E] border-dark-purple-300 flex-row-reverse"
                           : "bg-white text-dark-purple-100 hover:bg-stone-200 hover:text-dark-purple-300"
-                      }`}
+                        }`}
                       key={idx}
                       href={link.link}
                       target={"_blank"}
@@ -130,27 +129,22 @@ export default function Search() {
                     >
                       <h2>{link.name}</h2>
                       <div
-                        className={`bg-no-repeat bg-cover ${
-                          link.name == "video" ? "w-6 h-6" : "w-4 h-4"
-                        }`}
+                        className={`bg-no-repeat bg-cover ${link.name == "video" ? "w-6 h-6" : "w-4 h-4"
+                          }`}
                         style={{
-                          backgroundImage: `url(icons/${
-                            isHover ? link.urlHover : link.url
-                          })`,
+                          backgroundImage: `url(icons/${isHover ? link.urlHover : link.url
+                            })`,
                         }}
                       />
                     </Link>
                   ))}
               </div>
 
-              <div
-                className="relative w-full h-full overflow-y-scroll overflow-x-hidden text-wrap scroll-smooth"
-                style={{ scrollbarWidth: "1" }}
-              >
+              <div className="relative w-full h-full overflow-y-auto text-wrap scroll-smooth">
                 <div className="font-thin">{data.longDescription}</div>
               </div>
 
-              <div className="flex flex-wrap gap-2 overflow-y-auto max-h-40 p-2">
+              <div className="flex flex-wrap gap-2 overflow-y-auto p-2">
                 {data.type == "project" &&
                   data.tech.map((stack, idx) => (
                     <div
@@ -167,7 +161,7 @@ export default function Search() {
       </div>
     );
   };
-
+  
   return (
     <div className="flex flex-col w-full h-full text-white font-ropaSans">
       <div className="flex flex-col w-full relative ">
@@ -180,77 +174,76 @@ export default function Search() {
                   <SearchItem data={data} />
                 </div>
               ))) || (
-              <div className="flex flex-col gap-y-2">
-                <div className="flex flex-row gap-x-2 items-center">
-                  <div
-                    className="bg-no-repeat bg-cover w-4 h-5"
-                    style={{ backgroundImage: "url(icons/star.svg)" }}
-                  />
-                  <h2>AI Overview</h2>
-                </div>
-
-                <div
-                  className={`flex flex-col gap-y-3 relative ${
-                    showMore ? "h-auto" : "h-60 overflow-y-hidden"
-                  }`}
-                >
-                  {!showMore && (
-                    <>
-                      <h2>
-                        <span className="bg-[#735B95] py-1">
-                          I transform environments.
-                        </span>
-                      </h2>
-                      <h2>
-                        <span className="bg-[#735B95] py-1">
-                          seeking global opportunities to specialize in emerging
-                          technologies and apply my skills in software, project
-                          management, and problem solving.
-                        </span>
-                      </h2>
-                    </>
-                  )}
-
-                  <h2>
-                    I take full ownership of challenges and move projects forward independently—whether that’s designing a new microservice architecture, optimizing CI/CD pipelines with Podman, or delivering critical AsyncAPI Generator features during GSoC'25. You won’t need to spoon-feed me tasks; I proactively identify gaps, research solutions overnight, and return with a clear plan to unblock the team.
-                  </h2>
-
-                  <h2>
-                    My communication style blends clarity with assertiveness: I distill complex technical proposals into three-point summaries for stakeholders, and I give and receive code-review feedback rooted in data and best practices. This transparent approach builds trust, accelerates decision-making, and prevents costly misunderstandings.
-                  </h2>
-
-                  <h2>
-                    I write more than working code—I craft maintainable, well-documented solutions that stand the test of time. From defining robust API contracts in Node/Express to architecting React/Next.js frontends with ESLint and PostCSS standards, I ensure every line of code supports scalability, security, and easy collaboration.
-                  </h2>
-
-                  <h2>
-                    Hire me for my proven track record of delivering measurable impact: I’ve built AI-driven budgeting tools in FinanceFriend, implemented sentiment-analysis recovery features in NutriPlan, and contributed core templates to AsyncAPI Generator via GSoC'25. My relentless drive for innovation and continuous improvement guarantees products that delight users and move business KPIs.
-                  </h2>
-                </div>
-
-                {!showMore && (
-                  <div className="flex flex-col justify-end md:px-48 absolute left-0 w-full -bottom-8">
-                    <button
-                      onClick={() => setShowMore(!showMore)}
-                      className="mt-3 py-3 border border-accent-color w-full rounded-full sm:w-3/4 md:w-2/3 lg:w-2/5 bg-dark-purple-200 flex items-center justify-center hover:bg-[#322C48] gap-x-2 cursor-pointer"
-                    >
-                      <h2>Show More</h2>
-                      <svg
-                        width="24"
-                        height="24"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path d="M18 9L12 15L6 9" stroke="#C48DF6" />
-                      </svg>
-                    </button>
-
-                    <div className="borber-b border-[0.05rem] border-accent-text border-opacity-50 w-full mt-3" />
+                <div className="flex flex-col gap-y-2">
+                  <div className="flex flex-row gap-x-2 items-center">
+                    <div
+                      className="bg-no-repeat bg-cover w-4 h-5"
+                      style={{ backgroundImage: "url(icons/star.svg)" }}
+                    />
+                    <h2>AI Overview</h2>
                   </div>
-                )}
-              </div>
-            )}
+
+                  <div
+                    className={`flex flex-col gap-y-3 relative ${showMore ? "h-auto" : "h-60 overflow-y-hidden"
+                      }`}
+                  >
+                    {!showMore && (
+                      <>
+                        <h2>
+                          <span className="bg-[#735B95] py-1">
+                            I transform environments.
+                          </span>
+                        </h2>
+                        <h2>
+                          <span className="bg-[#735B95] py-1">
+                            seeking global opportunities to specialize in emerging
+                            technologies and apply my skills in software, project
+                            management, and problem solving.
+                          </span>
+                        </h2>
+                      </>
+                    )}
+
+                    <h2>
+                      I take full ownership of challenges and move projects forward independently—whether that’s designing a new microservice architecture, optimizing CI/CD pipelines with Podman, or delivering critical AsyncAPI Generator features during GSoC'25. You won’t need to spoon-feed me tasks; I proactively identify gaps, research solutions overnight, and return with a clear plan to unblock the team.
+                    </h2>
+
+                    <h2>
+                      My communication style blends clarity with assertiveness: I distill complex technical proposals into three-point summaries for stakeholders, and I give and receive code-review feedback rooted in data and best practices. This transparent approach builds trust, accelerates decision-making, and prevents costly misunderstandings.
+                    </h2>
+
+                    <h2>
+                      I write more than working code—I craft maintainable, well-documented solutions that stand the test of time. From defining robust API contracts in Node/Express to architecting React/Next.js frontends with ESLint and PostCSS standards, I ensure every line of code supports scalability, security, and easy collaboration.
+                    </h2>
+
+                    <h2>
+                      Hire me for my proven track record of delivering measurable impact: I’ve built AI-driven budgeting tools in FinanceFriend, implemented sentiment-analysis recovery features in NutriPlan, and contributed core templates to AsyncAPI Generator via GSoC'25. My relentless drive for innovation and continuous improvement guarantees products that delight users and move business KPIs.
+                    </h2>
+                  </div>
+
+                  {!showMore && (
+                    <div className="flex flex-col justify-end md:px-48 absolute left-0 w-full -bottom-8">
+                      <button
+                        onClick={() => setShowMore(!showMore)}
+                        className="mt-3 py-3 border border-accent-color w-full rounded-full sm:w-3/4 md:w-2/3 lg:w-2/5 bg-dark-purple-200 flex items-center justify-center hover:bg-[#322C48] gap-x-2 cursor-pointer"
+                      >
+                        <h2>Show More</h2>
+                        <svg
+                          width="24"
+                          height="24"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path d="M18 9L12 15L6 9" stroke="#C48DF6" />
+                        </svg>
+                      </button>
+
+                      <div className="borber-b border-[0.05rem] border-accent-text border-opacity-50 w-full mt-3" />
+                    </div>
+                  )}
+                </div>
+              )}
           </div>
 
           {displayQuery !== "why-hire-a-Adi" && (
@@ -306,24 +299,24 @@ export default function Search() {
                   </div>
                 </div>
               )) || (
-                <div className="flex flex-col gap-y-3 p-2">
-                  <h2 className="text-xl">"Lead a life worth telling"</h2>
-                  <h2 className="opacity-70 text-lg">
-                    This is one of my favourite quotes of all as it reminds me to prioritize experiences over possessions,
-                    pushing me to explore, learn, and grow through new adventures.
-                  </h2>
-                  <h2 className="opacity-70 text-lg">
-                    The following is curated log of those moments when I stepped beyond my
-                    comfort zone to create unforgettable stories.
-                  </h2>
-                  <h2 className="opacity-70 text-lg">
-                    No frills, no filters—just raw moments that shaped who I am.
-                  </h2>
-                  <h2 className="opacity-70 text-lg">
-                    Dive in and witness the journey of turning the unexpected into the extraordinary.
-                  </h2>
-                </div>
-              )}
+                  <div className="flex flex-col gap-y-3 p-2">
+                    <h2 className="text-xl">"Lead a life worth telling"</h2>
+                    <h2 className="opacity-70 text-lg">
+                      This is one of my favourite quotes of all as it reminds me to prioritize experiences over possessions,
+                      pushing me to explore, learn, and grow through new adventures.
+                    </h2>
+                    <h2 className="opacity-70 text-lg">
+                      The following is curated log of those moments when I stepped beyond my
+                      comfort zone to create unforgettable stories.
+                    </h2>
+                    <h2 className="opacity-70 text-lg">
+                      No frills, no filters—just raw moments that shaped who I am.
+                    </h2>
+                    <h2 className="opacity-70 text-lg">
+                      Dive in and witness the journey of turning the unexpected into the extraordinary.
+                    </h2>
+                  </div>
+                )}
             </div>
           )}
         </div>
