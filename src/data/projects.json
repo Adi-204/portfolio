@@ -1,0 +1,182 @@
+[
+  {
+    "title": "FinanceFriend",
+    "type": "project",
+    "alias": "financefriend",
+    "headline": "Full-Stack Financial Management Web App",
+    "timeline": "Nov 2024 – Jan 2025",
+    "searchDescription": "A comprehensive web application offering budgeting, smart planning tools, bill analysis, and risk management powered by Google Gemini · Context API · PDFKit · React · Tailwind CSS · Node.js · PostgreSQL",
+    "longDescription": "FinanceFriend is a full-stack financial management web application built to help users take control of their personal finances. On the frontend, I used React and Tailwind CSS to craft a responsive interface featuring budget trackers, expense visualizations, and an interactive dashboard. I integrated Google’s Gemini API to provide personalized financial recommendations and forecasting. For file exports, I leveraged PDFKit to generate downloadable reports summarizing spending trends and savings goals. The backend is powered by Node.js and Express, with PostgreSQL as the relational database. I implemented user authentication and profile management via secure JWT workflows, and used Axios interceptors alongside the React Context API to manage authentication state seamlessly. For image uploads in user profiles and receipts, I added Multer middleware. Overall, FinanceFriend enables users to plan budgets, analyze bills, and receive AI-driven insights—all within a sleek, user-friendly environment.",
+    "tech": [
+      "JavaScript",
+      "React",
+      "Tailwind CSS",
+      "Node.js",
+      "Express.js",
+      "PostgreSQL",
+      "Google Gemini API",
+      "PDFKit",
+      "Multer",
+      "Context API",
+      "Axios"
+    ],
+    "links": [
+      {
+        "link": "https://github.com/Adi-204/FinanceFriend",
+        "name": "github",
+        "url": "github-outline.svg",
+        "urlHover": "github-outline.svg"
+      },
+      {
+        "link": "https://financefrontend-5nte.onrender.com/",
+        "name": "check it out",
+        "url": "link.svg",
+        "urlHover": "link.svg"
+      }
+    ]
+  },
+  {
+    "title": "Real Estate Tokenization Platform",
+    "type": "project",
+    "alias": "RealEstateTokenization",
+    "headline": "Decentralized platform for real estate asset tokenization and liquidity management",
+    "timeline": "Mar 2025 – Apr 2025",
+    "searchDescription": "A decentralized platform enabling property token creation, fractional ownership through token trading, and ETH staking in a liquidity pool · Solidity · Hardhat · React · Tailwind CSS · Node.js · MongoDB",
+    "longDescription": "Built with Solidity and Hardhat, this platform features a Token Factory for deploying ERC-20 tokens representing properties, and a Liquidity Pool for ETH staking with profit-sharing. Authorized SPVs can manage property details and buy back tokens, while holders can request token sales. The frontend, powered by React, Tailwind CSS, Framer Motion, and Ethers.js, provides a real-time dashboard showing staked ETH, pool profits, active tokens, and pending sell requests. The backend uses Node.js, Express, and MongoDB, with Axios for HTTP communication, to manage user authentication, API routes, and data persistence.",
+    "tech": [
+      "Solidity",
+      "Hardhat",
+      "Ethers.js",
+      "React",
+      "Tailwind CSS",
+      "Framer Motion",
+      "Node.js",
+      "Express",
+      "MongoDB",
+      "Axios"
+    ],
+    "links": [
+      {
+        "link": "https://github.com/Adi-204/RealEstateTokenization",
+        "name": "github",
+        "url": "github-outline.svg",
+        "urlHover": "github-outline.svg"
+      }
+    ]
+  },
+  {
+    "title": "SecureCloud Drive",
+    "type": "project",
+    "alias": "SecureCloudDrive",
+    "headline": "Decentralized data storage solution leveraging Ethereum and IPFS",
+    "timeline": "Apr 2025",
+    "searchDescription": "A React and Tailwind CSS web app with MetaMask integration, IPFS file storage via Pinata, and on-chain link permanence on Ethereum · Solidity · Hardhat · Ethers.js · IPFS · Pinata",
+    "longDescription": "SecureCloud Drive is a decentralized data storage platform combining Ethereum and IPFS. Users connect via MetaMask to upload files, which are pinned to IPFS through Pinata. After upload, a smart contract written in Solidity (deployed on Sepolia with Hardhat) records the IPFS link on-chain for tamper-proof reference. The React frontend, styled with Tailwind CSS and powered by Ethers.js, provides file upload, share, and access-revocation functionality—all secured by blockchain immutability.",
+    "tech": [
+      "React.js",
+      "Tailwind CSS",
+      "Solidity",
+      "Hardhat",
+      "Ethers.js",
+      "IPFS",
+      "Pinata",
+      "MetaMask"
+    ],
+    "links": [
+      {
+        "link": "https://github.com/Adi-204/SecureCloud-Drive",
+        "name": "github",
+        "url": "github-outline.svg",
+        "urlHover": "github-outline.svg"
+      }
+    ]
+  },
+  {
+    "title": "NutriPlan",
+    "type": "project",
+    "alias": "NutriPlan",
+    "headline": "Your ultimate companion on the journey to a healthier lifestyle through intelligent eating habits",
+    "timeline": "Mar 2024 – Apr 2024",
+    "searchDescription": "A full-stack web app offering weekly meal plans, NutriScan food recognition, educational blogs, and a personalized AI-driven nutrition chatbot · React · Node.js · Express · Flask · PostgreSQL · scikit-learn · OpenAI · LangChain",
+    "longDescription": "NutriPlan is a comprehensive nutrition management platform. The React frontend delivers an intuitive dashboard for tracking meals and setting personalized diet goals, including a Weekly Meal Plan generator and NutriScan feature for food image recognition. Educational Blogs provide in-depth articles on healthy eating, while a Personalized Chatbot—powered by OpenAI and orchestrated via LangChain—offers tailored nutritional advice. The backend comprises Node.js/Express services alongside Flask microservices, with PostgreSQL handling data persistence. A scikit-learn ML pipeline analyzes user eating patterns to refine suggestions over time. Hosted as a demo at nutriplan-ems7.onrender.com, the project showcases the fusion of modern web technologies and AI for smarter eating. ",
+    "tech": [
+      "React",
+      "Node.js",
+      "Express",
+      "Flask",
+      "PostgreSQL",
+      "scikit-learn",
+      "OpenAI",
+      "LangChain"
+    ],
+    "links": [
+      {
+        "link": "https://github.com/Adi-204/hackiiitp",
+        "name": "github",
+        "url": "github-outline.svg",
+        "urlHover": "github-outline.svg"
+      }
+    ]
+  },
+  {
+    "title": "SONA Restaurant Website",
+    "type": "project",
+    "alias": "SONA",
+    "headline": "Responsive Restaurant Website with Menu, Reviews & Contact",
+    "timeline": "Jul 2024 – Aug 2024",
+    "searchDescription": "A React.js & Vite template with Tailwind CSS and Material Tailwind for a responsive restaurant website featuring Home, About, Menu, FAQ, Reviews, and Contact pages",
+    "longDescription": "SONA is a React application that delivers a modern, multi-page restaurant website. It includes a carousel-driven Home page, an About section outlining the restaurant’s story, a visually rich Menu page, an interactive FAQ, customer testimonials, and a Contact & Location page. The project is configured with PostCSS and ESLint for code quality, and continuously deployed to Vercel for live previews.",
+    "tech": [
+      "React.js",
+      "Vite",
+      "Tailwind CSS",
+      "Material Tailwind",
+      "React Router",
+      "React Icons"
+    ],
+    "links": [
+      {
+        "link": "https://github.com/Adi-204/SONA",
+        "name": "github",
+        "url": "github-outline.svg",
+        "urlHover": "github-outline.svg"
+      },
+      {
+        "link": "https://sona-nu.vercel.app",
+        "name": "check it out",
+        "url": "link.svg",
+        "urlHover": "link.svg"
+      }
+    ]
+  },
+  {
+    "title": "VanLife",
+    "type": "project",
+    "alias": "VanLife",
+    "headline": "Responsive Rental Van Booking Website with React & Vite",
+    "timeline": "Nov, 2023 – Dec, 2023",
+    "searchDescription": "A React & Vite rental van booking website featuring van listings, detail views, host-your-van page, responsive CSS and loaders · React Router · CSS · Vite",
+    "longDescription": "VanLife is a rental van website where users can browse available vans, view detailed information pages, and list their own vans for rent with an intuitive Host Van page. Built on a React + Vite scaffold, it implements client-side routing via React Router and enhances user experience with custom CSS loaders and fully responsive design across desktop and mobile. Deployed live at van-life-inky.vercel.app for seamless booking experiences.",
+    "tech": [
+      "React",
+      "Vite",
+      "React Router",
+      "CSS",
+      "HTML"
+    ],
+    "links": [
+      {
+        "link": "https://github.com/Adi-204/VanLife",
+        "name": "github",
+        "url": "github-outline.svg",
+        "urlHover": "github-outline.svg"
+      },
+      {
+        "link": "https://van-life-inky.vercel.app",
+        "name": "check it out",
+        "url": "link.svg",
+        "urlHover": "link.svg"
+      }
+    ]
+  }
+]

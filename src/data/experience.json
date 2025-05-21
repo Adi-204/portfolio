@@ -1,0 +1,35 @@
+[
+  {
+    "title": "Open Source",
+    "alias": "asyncapi",
+    "headline": "From First PRs to GSoC 2025 AsyncAPI Generator Maintainer",
+    "timeline": "May 08 2025",
+    "searchDescription": "Started contributing to AsyncAPI in Jan ’25, then selected as a GSoC'25 AsyncAPI Generator maintainer",
+    "longDescription": "I began my journey with the JSON Schema community in December 2024 by diving into their website repo my first pull requests was to add a new tool – protoc-gen-jsonschema. Encouraged by positive feedback, I next tackled features in the AsyncAPI CLI, adding streamlined commands. Building on that momentum, I helped extend the AsyncAPI Generator, creating new templates and improving existing ones to better serve different languages and frameworks.\n\nThrough late-night coding sessions, reviews from maintainers, and lively discussions on GitHub, I sharpened my skills in JavaScript, AsyncAPI specs, and community-driven development. All that hard work paid off on May 8, 2025, when I was officially selected as a GSoC'25 Mentee in AsyncAPI Generator Maintainer. I’m thrilled to continue collaborating with the community—mentoring new contributors, refining the generator, and helping shape the future of event-driven API tooling."
+  },
+  {
+    "title": "Open Source",
+    "alias": "kwoc",
+    "headline": "Contributing to Travel Buddy in KWoC 2024",
+    "timeline": "Dec 2024",
+    "searchDescription": "Joined KWoC in Dec ’24 to enhance Travel Buddy—tackled UI issues, generalized the platform, and built a standalone Auth module",
+    "longDescription": "I kicked off my open-source journey in December 2024 with KWoC by diving into the Travel Buddy codebase—a Next.js 14 and MongoDB Atlas app designed to help IIT KGP students find travel partners. My first task was a “good first issue,” where I revamped the button designs with hover effects, animations, and richer colors to make the UI more engaging and responsive.\n\nNext, I tackled a larger challenge: generalizing Travel Buddy for any institution. I introduced an Institute model, updated meta tags and content placeholders, and refactored the database schema so that multiple colleges could plug in seamlessly. I also added an `/authenticate` route that lets users select their institute from a dropdown during signup.\n\nTo complete the platform’s flexibility, I built a standalone OTP-based authentication module—using HMAC-SHA256 for secure OTP generation and Nodemailer to send codes—so organizations without their own email-based login (like HEIMDALL) can onboard easily. Throughout, I collaborated closely with Saharsh Agrawal and the KWoC community on Discord and GitHub, iterating on feedback and refining my pull requests.\n\nOn January 21, 2025, I published my KWoC project report, reflecting on how these contributions sharpened my Next.js and collaboration skills. Beyond the lines of code, the mentorship, peer discussions, and community spirit made this five-week sprint an unforgettable deep dive into open-source development."
+  },
+  {
+    "title": "Competitive Programming",
+    "alias": "icpc",
+    "headline": "ICPC: A Rollercoaster of Lessons",
+    "timeline": "Nov 2024",
+    "searchDescription": "Participated in ICPC with my team—faced unexpected twists, bounced back stronger in recontest, and learned more than ever",
+    "longDescription": "My ICPC journey in 2024 was nothing short of a rollercoaster. I was part of a team ICPC_bots competing for the first time, filled with excitement and nerves. During our first official attempt, things went downhill fast. We barely solved any problems our performance was one of our worst ever, and we left the contest feeling defeated and disappointed.\n\nBut then, in an unprecedented twist, it was announced that the contest would be rerun due to cheating. This had never happened before. We suddenly had a second chance.\n\nWe regrouped, analyzed where we had gone wrong, and gave the recontest everything we had. This time, our performance was miles better—we solved more problems, collaborated better under pressure, and proved to ourselves that we did belong in that environment. Unfortunately, our score still wasn’t quite enough to qualify for regionals.\n\nEven though we didn’t make it through, ICPC taught me more about resilience, teamwork, and trust. I’m walking away with stronger bonds, sharper problem-solving skills, and a hunger to do better next year."
+  },
+  {
+    "title": "Startup",
+    "alias": "gemini",
+    "headline": "Building FinanceFriend for the Google Gemini API Competition",
+    "timeline": "Apr 25 2024",
+    "type": "startup",
+    "searchDescription": "Poured my heart into building FinanceFriend for Google’s Gemini API competition—my most ambitious project yet",
+    "longDescription": "As part of the Google Gemini API Developer Competition, I built FinanceFriend — a full-stack financial management web app that acts like a personal assistant for your money. The app includes smart tools like personalized planning, bill analysis, risk detection, and even AI-powered chat interactions using Gemini.\n\nThis was the most ambitious project I’ve ever worked on. From integrating the Gemini API and implementing features like PDF generation, dynamic charting, and authentication flows, to ensuring a seamless user experience—I pushed myself on both the frontend and backend. You can check it out here: [GitHub Repo](https://github.com/Adi-204/FinanceFriend) and [Demo Video](https://www.youtube.com/watch?v=PEO9kGBT1x8).\n\nAlthough I didn’t win the competition, FinanceFriend ended up being my one of the most viewed and appreciated project. The YouTube demo gathered hundreds of views, and I received incredible support from the community—people voted, and resonated with the problem I was trying to solve.\n\nEven without the trophy, I walked away with something more important: validation for my ideas, confidence in my ability to ship a complete product, and a clearer vision for building tools that matter. This is just the beginning."
+  }
+]
