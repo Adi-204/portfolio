@@ -1,4 +1,6 @@
 import Link from "next/link";
+import Image from "next/image";
+
 export default function About() {
   return (
     <div className=" flex flex-col w-full md:flex-row-reverse h-full items-center gap-x-10 gap-y-10 justify-center pb-10 md:pb-0">
@@ -23,7 +25,7 @@ export default function About() {
               AsyncAPI Initiative organization
             </Link>
           </span>{" "}
-          developing templates and tools to streamline microservices testing and WebSocket integrations. I’m developing maintainer skills by handling issue triaging, bug fixes, PR reviews, writing tests, improving documentation, helping newcomers to contribute and guiding the project's long-term growth. 
+          developing templates and tools to streamline microservices testing and WebSocket integrations. I’m developing maintainer skills by handling issue triaging, bug fixes, PR reviews, writing tests, improving documentation, helping newcomers to contribute and guiding the project's long-term growth.
         </h2>
         <h2>
           I'm passionate about embracing new challenges and build solutions that make a positive impact. Open to collaborations let’s build something amazing together! 🚀
@@ -36,9 +38,13 @@ export default function About() {
         </Link>
       </div>
       <div className="flex md:flex-col-reverse items-center justify-start">
-        <div
-          className="bg-no-repeat bg-cover w-32 h-32 md:w-48 md:h-48"
-          style={{ backgroundImage: `url("head-shot.png")` }}
+        <Image
+          src="/head-shot.png"
+          alt="Adi Boghawala"
+          width={192} 
+          height={192}
+          priority 
+          className="object-cover w-32 h-32 md:w-48 md:h-48"
         />
       </div>
     </div>
