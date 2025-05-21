@@ -67,10 +67,7 @@ export default function Search() {
 
   const SearchItem = ({ data }) => {
     return (
-      <div
-        className="font-ropaSans flex flex-row gap-x-2"
-        style={{ zIndex: 10 }}
-      >
+      <div className="font-ropaSans flex flex-row gap-x-2" style={{ zIndex: 10 }}>
         <div className="w-4/5">
           <div className="flex flex-row items-center gap-x-4">
             <div className="bg-dark-purple-300 rounded-full w-8 h-8 flex items-center justify-center">
@@ -100,9 +97,7 @@ export default function Search() {
     return (
       <div>
         <div className="fixed inset-0 bg-gray-900 bg-opacity-70 z-40 flex items-center justify-center p-4">
-          <div
-            className={`p-2 flex flex-col items-center w-full max-w-2xl bg-accent-color rounded-lg shadow-lg z-50 max-h-[90vh]`}
-          >
+          <div className={`p-2 flex flex-col items-center w-full max-w-2xl bg-accent-color rounded-lg shadow-lg z-50 max-h-[90vh]`}>
             <div className="flex row w-full justify-end mb-2">
               <div
                 className="bg-no-repeat bg-cover w-6 h-6 cursor-pointer hover:opacity-70 transition-opacity duration-150"
@@ -113,9 +108,11 @@ export default function Search() {
 
             <div className="flex flex-col w-full items-center justify-start h-full p-4 gap-y-2 overflow-hidden">
               <h2 className="w-full text-2xl">{data.title}</h2>
-              <div className={`flex flex-row w-full gap-x-2 flex-wrap`}>
-                {displayQuery === "Adi-projects" &&
-                  data.links.map((link, idx) => (
+
+              {/* Links section - works for both projects and experiences */}
+              {(data.links && data.links.length > 0) && (
+                <div className={`flex flex-row w-full gap-x-2 flex-wrap`}>
+                  {data.links.map((link, idx) => (
                     <Link
                       className={`flex flex-row py-1.5 px-3 text-sm font-medium text-center items-center gap-x-2 rounded border border-stone-700 transform transition-all duration-300 ${link.name == "github"
                           ? "bg-dark-purple-300 hover:bg-[#4D456E] border-dark-purple-300 flex-row-reverse"
@@ -138,15 +135,17 @@ export default function Search() {
                       />
                     </Link>
                   ))}
-              </div>
+                </div>
+              )}
 
               <div className="relative w-full h-full overflow-y-auto text-wrap scroll-smooth">
                 <div className="font-thin">{data.longDescription}</div>
               </div>
 
-              <div className="flex flex-wrap gap-2 overflow-y-auto p-2">
-                {data.type == "project" &&
-                  data.tech.map((stack, idx) => (
+              {/* Tech stack - only for projects */}
+              {data.type == "project" && data.tech && (
+                <div className="flex flex-wrap gap-2 overflow-y-auto p-2">
+                  {data.tech.map((stack, idx) => (
                     <div
                       key={idx}
                       className="bg-white bg-opacity-10 text-accent-text text-sm p-1 rounded"
@@ -154,14 +153,15 @@ export default function Search() {
                       {stack}
                     </div>
                   ))}
-              </div>
+                </div>
+              )}
             </div>
           </div>
         </div>
       </div>
     );
   };
-  
+
   return (
     <div className="flex flex-col w-full h-full text-white font-ropaSans">
       <div className="flex flex-col w-full relative ">
