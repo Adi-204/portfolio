@@ -59,7 +59,7 @@ export default function Header() {
     {
       text: "cv",
       icon: "resume.svg",
-      url: "https://drive.google.com/file/d/1LZHJUqmJ2VJXaa4MAkfZwD4FnBBEbp7C/view?usp=sharing",
+      url: "https://drive.google.com/file/d/1X2f7CYGJ4DNb7LChyo6tyCpxIhD9uNkY/view?usp=sharing",
     }
   ];
 
