@@ -1,0 +1,34 @@
+[
+  {
+    "title": "Open Source",
+    "alias": "asyncapi",
+    "headline": "Contribute. Connect. Get Selected: My GSoC Story",
+    "timeline": "May 2025",
+    "searchDescription": "Started contributing to AsyncAPI in Jan ’25, then selected as a GSoC'25 AsyncAPI Generator maintainer",
+    "longDescription": "I began by shortlisting organizations aligned with his expertise in JavaScript/TypeScript and active community involvement, eventually focusing on JSON Schema and AsyncAPI. After initial challenges, including setting up projects and contributing meaningfully,I made his first successful pull request to JSON Schema in December 2024. In January, I revisited AsyncAPI, overcoming setup issues and contributing to the CLI project, which led to his first merged pull request and a significant confidence boost. I continued contributions, including to the AsyncAPI Generator project, and active participation in community meetings, culminated in his selection for GSoC. I emphasizes the importance of persistence, community engagement, and stepping out of one's comfort zone in achieving success in open-source contributions.",
+    "links": [
+      {
+        "link": "https://medium.com/@adiboghawala/contribute-connect-get-selected-my-gsoc-story-e7548ca1f1ad",
+        "name": "Blog",
+        "url": "link.svg",
+        "urlHover": "link.svg"
+      }
+    ]
+  },
+  {
+    "title": "Open Source",
+    "alias": "kwoc",
+    "headline": "Contributing to Travel Buddy in KWoC 2024",
+    "timeline": "Dec 2024",
+    "searchDescription": "Joined KWoC in Dec ’24 to enhance Travel Buddy—tackled UI issues, generalized the platform, and built a standalone Auth module",
+    "longDescription": "As a third-year Computer Science student at IIIT Pune, I chose to work on Travel Buddy, a Next.js and MongoDB-based application aimed at simplifying travel coordination for IIT Kharagpur students. I began by enhancing the user interface, specifically improving button designs for better interactivity. Recognizing the potential for broader application, I proposed and implemented changes to generalize the platform for use by other institutions, including dynamic metadata updates, customizable content, and a more universal authentication system. These contributions not only improved the project's functionality but also showcased my initiative and problem-solving skills. I experience the value of starting with manageable tasks, engaging deeply with project goals, and progressively taking on more significant challenges. For a detailed account of my experience and insights into contributing to open-source projects, read the full blog post",
+    "links": [
+      {
+        "link": "https://medium.com/@adiboghawala/kwoc-kharagpur-winter-of-code-2024-project-report-357213b9108e",
+        "name": "Blog",
+        "url": "link.svg",
+        "urlHover": "link.svg"
+      }
+    ]
+  }
+]

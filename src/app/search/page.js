@@ -4,6 +4,7 @@ import { useSearchParams, useRouter } from "next/navigation";
 import { useState, useEffect } from "react";
 import projects from "../../data/projects.json";
 import experiences from "../../data/experience.json";
+import blogs from "../../data/blogs.json";
 
 export default function Search() {
   const [isHover, setIsHover] = useState(false);
@@ -19,7 +20,8 @@ export default function Search() {
   const displayQuery = query ? query : "";
   const displayData =
     (displayQuery == "Adi-projects" && [...projects]) ||
-    (displayQuery == "experience" && [...experiences]) || [];
+    (displayQuery == "experience" && [...experiences]) ||
+    (displayQuery == "blogs" && [...blogs]) || [];
 
   const [showMore, setShowMore] = useState(false);
   const [isOpen, setIsOpen] = useState(project === "meetmidway" ? true : false);
@@ -52,10 +54,8 @@ export default function Search() {
 
   useEffect(() => {
     if (project) {
-      const params = new URLSearchParams(searchParams); // Clone the existing searchParams
-      params.delete("p"); // Remove 'p' parameter
-
-      // Update the URL without refreshing the page
+      const params = new URLSearchParams(searchParams);
+      params.delete("p");
       router.replace(`?${params.toString()}`, { shallow: true });
     }
   }, [project, searchParams, router]);
@@ -109,7 +109,6 @@ export default function Search() {
             <div className="flex flex-col w-full items-center justify-start h-full p-4 gap-y-2 overflow-hidden">
               <h2 className="w-full text-2xl">{data.title}</h2>
 
-              {/* Links section - works for both projects and experiences */}
               {(data.links && data.links.length > 0) && (
                 <div className={`flex flex-row w-full gap-x-2 flex-wrap`}>
                   {data.links.map((link, idx) => (
@@ -142,7 +141,6 @@ export default function Search() {
                 <div className="font-thin">{data.longDescription}</div>
               </div>
 
-              {/* Tech stack - only for projects */}
               {data.type == "project" && data.tech && (
                 <div className="flex flex-wrap gap-2 overflow-y-auto p-2">
                   {data.tech.map((stack, idx) => (
@@ -205,7 +203,7 @@ export default function Search() {
                     )}
 
                     <h2>
-                      I take full ownership of challenges and move projects forward independently—whether that’s designing a new microservice architecture, optimizing CI/CD pipelines with Podman, or delivering critical AsyncAPI Generator features during GSoC'25. You won’t need to spoon-feed me tasks; I proactively identify gaps, research solutions overnight, and return with a clear plan to unblock the team.
+                      I take full ownership of challenges and move projects forward independently—whether that's designing a new microservice architecture, optimizing CI/CD pipelines with Podman, or delivering critical AsyncAPI Generator features during GSoC'25. You won't need to spoon-feed me tasks; I proactively identify gaps, research solutions overnight, and return with a clear plan to unblock the team.
                     </h2>
 
                     <h2>
@@ -217,7 +215,7 @@ export default function Search() {
                     </h2>
 
                     <h2>
-                      Hire me for my proven track record of delivering measurable impact: I’ve built AI-driven budgeting tools in FinanceFriend, implemented sentiment-analysis recovery features in NutriPlan, and contributed core templates to AsyncAPI Generator via GSoC'25. My relentless drive for innovation and continuous improvement guarantees products that delight users and move business KPIs.
+                      Hire me for my proven track record of delivering measurable impact: I've built AI-driven budgeting tools in FinanceFriend, implemented sentiment-analysis recovery features in NutriPlan, and contributed core templates to AsyncAPI Generator via GSoC'25. My relentless drive for innovation and continuous improvement guarantees products that delight users and move business KPIs.
                     </h2>
                   </div>
 
@@ -246,77 +244,102 @@ export default function Search() {
               )}
           </div>
 
-          {displayQuery !== "why-hire-a-Adi" && (
+          {displayQuery === "blogs" && (
             <div className="hidden w-1/3 p-2 h-[40rem] border-[0.05rem] border-white border-opacity-30 shadow-xl rounded-lg md:flex flex-col gap-y-3 ">
               <img
-                src={
-                  displayQuery == "experience"
-                    ? "search-img/life.jpeg"
-                    : "https://github-readme-stats.vercel.app/api/top-langs/?username=Adi-204&layout=compact&theme=nightowl&hide_border=true&exclude_repo=the-www-blog,clean-water-foundation&langs_count=6"
-                }
+                src="blog.png"
+                alt="Adi writing"
+                className="w-full h-[17rem] rounded-t-lg"
+              />
+              <div className="flex flex-col gap-y-3 p-2">
+                <h2 className="text-xl">"Writing is thinking on paper"</h2>
+                <h2 className="opacity-70 text-lg">
+                  I believe in documenting my journey—the wins, the failures, and the lessons in between.
+                </h2>
+                <h2 className="opacity-70 text-lg">
+                  These blogs capture my thought process, technical deep dives, and personal reflections.
+                </h2>
+                <h2 className="opacity-70 text-lg">
+                  From open-source contributions to competitive programming experiences,
+                  each post tells a story of growth.
+                </h2>
+              </div>
+            </div>
+          )}
+
+          {displayQuery === "Adi-projects" && (
+            <div className="hidden w-1/3 p-2 h-[40rem] border-[0.05rem] border-white border-opacity-30 shadow-xl rounded-lg md:flex flex-col gap-y-3 ">
+              <img
+                src="https://github-readme-stats.vercel.app/api/top-langs/?username=Adi-204&layout=compact&theme=nightowl&hide_border=true&exclude_repo=the-www-blog,clean-water-foundation&langs_count=6"
                 alt="Adi"
                 className="w-full h-[17rem] rounded-t-lg"
               />
-
-              {(displayQuery == "Adi-projects" && (
-                <div className="flex flex-col gap-y-3">
-                  <h2 className="opacity-70 text-lg">
-                    I love building impact-driven, full-stack projects.{" "}
+              <div className="flex flex-col gap-y-3">
+                <h2 className="opacity-70 text-lg">
+                  I love building impact-driven, full-stack projects.{" "}
+                </h2>
+                <h2 className="opacity-70 text-lg">
+                  Currently, I'm working on specializing my technical skills
+                  in Next JS.
+                </h2>
+                <div className="flex flex-col">
+                  <h2 className="uppercase tracking-wider text-sm">
+                    languages
                   </h2>
-                  <h2 className="opacity-70 text-lg">
-                    Currently, I'm working on specializing my technical skills
-                    in Next JS.
-                  </h2>
-                  <div className="flex flex-col">
-                    <h2 className="uppercase tracking-wider text-sm">
-                      languages
-                    </h2>
-                    <div className="flex flex-row flex-wrap gap-2">
-                      {languages.map((stack, idx) => (
-                        <div
-                          key={idx}
-                          className="inline-flex bg-white bg-opacity-10 text-accent-text text-sm p-1 rounded"
-                        >
-                          {stack}
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-                  <div className="flex flex-col">
-                    <h2 className="uppercase tracking-wider text-sm">
-                      Frameworks & Libraries
-                    </h2>
-                    <div className="flex flex-row flex-wrap gap-2">
-                      {technologies.map((stack, idx) => (
-                        <div
-                          key={idx}
-                          className="inline-flex bg-white bg-opacity-10 text-accent-text text-sm p-1 rounded"
-                        >
-                          {stack}
-                        </div>
-                      ))}
-                    </div>
+                  <div className="flex flex-row flex-wrap gap-2">
+                    {languages.map((stack, idx) => (
+                      <div
+                        key={idx}
+                        className="inline-flex bg-white bg-opacity-10 text-accent-text text-sm p-1 rounded"
+                      >
+                        {stack}
+                      </div>
+                    ))}
                   </div>
                 </div>
-              )) || (
-                  <div className="flex flex-col gap-y-3 p-2">
-                    <h2 className="text-xl">"Lead a life worth telling"</h2>
-                    <h2 className="opacity-70 text-lg">
-                      This is one of my favourite quotes of all as it reminds me to prioritize experiences over possessions,
-                      pushing me to explore, learn, and grow through new adventures.
-                    </h2>
-                    <h2 className="opacity-70 text-lg">
-                      The following is curated log of those moments when I stepped beyond my
-                      comfort zone to create unforgettable stories.
-                    </h2>
-                    <h2 className="opacity-70 text-lg">
-                      No frills, no filters—just raw moments that shaped who I am.
-                    </h2>
-                    <h2 className="opacity-70 text-lg">
-                      Dive in and witness the journey of turning the unexpected into the extraordinary.
-                    </h2>
+                <div className="flex flex-col">
+                  <h2 className="uppercase tracking-wider text-sm">
+                    Frameworks & Libraries
+                  </h2>
+                  <div className="flex flex-row flex-wrap gap-2">
+                    {technologies.map((stack, idx) => (
+                      <div
+                        key={idx}
+                        className="inline-flex bg-white bg-opacity-10 text-accent-text text-sm p-1 rounded"
+                      >
+                        {stack}
+                      </div>
+                    ))}
                   </div>
-                )}
+                </div>
+              </div>
+            </div>
+          )}
+
+          {displayQuery === "experience" && (
+            <div className="hidden w-1/3 p-2 h-[40rem] border-[0.05rem] border-white border-opacity-30 shadow-xl rounded-lg md:flex flex-col gap-y-3 ">
+              <img
+                src="search-img/life.jpeg"
+                alt="Adi"
+                className="w-full h-[17rem] rounded-t-lg"
+              />
+              <div className="flex flex-col gap-y-3 p-2">
+                <h2 className="text-xl">"Lead a life worth telling"</h2>
+                <h2 className="opacity-70 text-lg">
+                  This is one of my favourite quotes of all as it reminds me to prioritize experiences over possessions,
+                  pushing me to explore, learn, and grow through new adventures.
+                </h2>
+                <h2 className="opacity-70 text-lg">
+                  The following is curated log of those moments when I stepped beyond my
+                  comfort zone to create unforgettable stories.
+                </h2>
+                <h2 className="opacity-70 text-lg">
+                  No frills, no filters—just raw moments that shaped who I am.
+                </h2>
+                <h2 className="opacity-70 text-lg">
+                  Dive in and witness the journey of turning the unexpected into the extraordinary.
+                </h2>
+              </div>
             </div>
           )}
         </div>

@@ -10,8 +10,9 @@ export default function SearchBar({ query }) {
   const dropdownRef = useRef(null);
   const searches = [
     { search: "Adi's projects", param: "Adi-projects" },
+    { search: "blogs", param: "blogs" },
     { search: "life experiences", param: "experience" },
-    { search: "why hire Adi", param: "why-hire-a-Adi" },
+    { search: "why hire Adi", param: "why-hire-a-Adi" }
   ];
   const path = usePathname();
 
