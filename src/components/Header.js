@@ -101,7 +101,7 @@ export default function Header() {
       >
         {(path !== "/" && (
           <Link href="/" className="text-white text-2xl hidden md:block">
-            (Adi)oogle
+            (Adi)Search
           </Link>
         )) || (
             <Link
@@ -118,7 +118,7 @@ export default function Header() {
       <div className="flex flex-row items-center justify-center gap-x-5">
         {path !== "/" && (
           <Link href="/" className={`text-white text-2xl block md:hidden`}>
-            (Adi)oogle
+            (Adi)Search
           </Link>
         )}
         <div

@@ -1,5 +1,39 @@
 [
   {
+    "title": "Know Your Resume (KYR)",
+    "type": "project",
+    "alias": "know-your-resume",
+    "headline": "AI-Powered Resume Analysis & Proctored Testing Platform",
+    "timeline": "May 2025",
+    "searchDescription": "A Next.js platform that uses Google Gemini API to generate personalized resume feedback, MCQs, and written tests · Proctored environment with WebRTC · Cloudinary file uploads · TypeScript · MongoDB",
+    "longDescription": "Know Your Resume is a cutting-edge platform designed to help job seekers refine their resumes through AI-driven feedback and simulated interviews. Leveraging Google’s Gemini API, the app analyzes uploaded resumes and generates tailored feedback, multiple-choice questions (MCQs), and written responses to prepare users for real-world job applications. I built the frontend with Next.js and TypeScript, using ShadCN for a sleek, accessible UI. For secure resume uploads, I integrated Cloudinary with FormData API and robust error handling. The standout feature is the proctored test environment: I implemented WebRTC and the MediaDevices API to enable real-time camera/screen monitoring during assessments, with cleanup handlers to ensure privacy. The backend uses MongoDB for storing user data and test results, coupled with secure API routes. This project bridges the gap between resume submission and interview readiness, offering users a comprehensive, AI-augmented preparation tool.",
+    "tech": [
+      "TypeScript",
+      "Next.js",
+      "Google Gemini API",
+      "WebRTC",
+      "MediaDevices API",
+      "Cloudinary",
+      "MongoDB",
+      "ShadCN",
+      "FormData API"
+    ],
+    "links": [
+      {
+        "link": "https://github.com/Adi-204/KYR",
+        "name": "github",
+        "url": "github-outline.svg",
+        "urlHover": "github-outline.svg"
+      },
+      {
+        "link": "https://kyr-drtg.vercel.app/",
+        "name": "check it out",
+        "url": "link.svg",
+        "urlHover": "link.svg"
+      }
+    ]
+  },
+  {
     "title": "FinanceFriend",
     "type": "project",
     "alias": "financefriend",

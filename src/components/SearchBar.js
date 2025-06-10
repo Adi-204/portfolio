@@ -5,7 +5,7 @@ import Link from "next/link";
 import { AnimatePresence, motion } from "framer-motion";
 
 export default function SearchBar({ query }) {
-  const [search, setSearch] = useState("Search (Adi)oogle");
+  const [search, setSearch] = useState("Find my projects, work, or blogs...");
   const [showSearch, setShowSearch] = useState(false);
   const dropdownRef = useRef(null);
   const searches = [
@@ -44,7 +44,7 @@ export default function SearchBar({ query }) {
     >
       {path === "/" && (
         <h2 className="text-white text-6xl lg:text-7xl xl:text-8xl absolute -top-20 lg:-top-28">
-          (Adi)oogle
+          (Adi)Search
         </h2>
       )}
 
@@ -67,7 +67,7 @@ export default function SearchBar({ query }) {
           />
           <div
             className={`flex-grow px-4 py-2 bg-accent-color focus:outline-none ${
-              search === "Search (Rum)oogle" ? "text-accent-text" : "text-white"
+              search === "Find my projects, work, or blogs..." ? "text-accent-text" : "text-white"
             }`}
             onClick={() => setShowSearch(!showSearch)}
           >

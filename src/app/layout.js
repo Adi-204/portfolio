@@ -20,7 +20,7 @@ export default function RootLayout({ children }) {
         <meta charSet="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="icon" href="/logo.png" type="image/png" />
-        <title>adioogle</title>
+        <title>AdiSearch</title>
         <script
           dangerouslySetInnerHTML={{
             __html: `
@@ -49,12 +49,12 @@ export default function RootLayout({ children }) {
           }}
         ></script>
 
-        <meta property="og:title" content="Adioogle" />
+        <meta property="og:title" content="AdiSearch" />
         <meta property="og:description" content="everything you'll ever need" />
         <meta property="og:image" content="/Banner.png" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:image:type" content="image/png"/>
-        <meta name="twitter:title" content="Adioogle" />
+        <meta name="twitter:title" content="AdiSearch" />
         <meta name="twitter:description" content="my g*ogle" />
       </head>
       <body className="flex flex-col min-h-screen relative">
